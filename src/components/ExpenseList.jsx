@@ -1,4 +1,9 @@
-import { FaGauge, FaPen, FaTrash } from "react-icons/fa6";
+import {
+  FaGauge,
+  FaPen,
+  FaTrash,
+  FaTriangleExclamation,
+} from "react-icons/fa6";
 import moment from "moment";
 import AddExpense from "./AddExpense";
 import { useState } from "react";
@@ -12,15 +17,19 @@ const ExpenseList = ({ expense }) => {
 
   const handleDelete = (expenseId) => {
     Swal.fire({
-      title: "Delete Expense",
+      title: `<div class= "flex items-center gap-2">
+      <div class="bg-red-200 p-2 flex items-center justify-center  rounded-full "><i class="fa-solid fa-triangle-exclamation text-[18px] text-red-400"></i></div>
+      <h2 class= "font-medium text-[14px]  ">Delete Expense</h2>
+      </div>`,
       html: `
         <p>Are you sure to delete this expense</p>
         <h1 class = "bg-gray-200 w-full p-2 rounded-md text-xl font-bold mt-2">${expense.description} !</h2>`,
-      icon: "warning",
       showCancelButton: true,
       cancelButtonText: "Cancel",
       confirmButtonText: "Delete",
-      confirmButtonColor: "#d33",
+      confirmButtonColor: "#2563EB",
+      width: "350px",
+      padding: "0px",
     }).then((event) => {
       if (event.isConfirmed) {
         dispatch(deleteExpense({ expenseId: expense.id }));
@@ -38,15 +47,35 @@ const ExpenseList = ({ expense }) => {
   return (
     <>
       <tr className="border-b-1 border-gray-300">
-        <td className="px-6 py-2">
-          <h2 className="font-medium">{expense.description}</h2>
+        <td className="px-2 md:px-6 py-2 w-26 md:w-auto  break-words text-left">
+          <h2 className=" font-medium">{expense.description}</h2>
           <p className="text-[12px] text-gray-400"> {expense.note} </p>
         </td>
-        <td className="font-normal text-gray-500">$ {expense.amount} </td>
-        <td className="font-normal text-gray-500"> {expense.category} </td>
-        <td className="font-normal text-gray-500"> {expense.date} </td>
-        <td>
-          <div className="flex text-[12px] gap-4">
+        <td className="font-normal text-gray-500 pl-8 md:pl-0">
+          $ {expense.amount}{" "}
+        </td>
+        <td className="font-normal text-gray-500 px-6 md:px-0 ">
+          <h2
+            className={`inline-block px-2 rounded-xl  ${
+              expense.category === "Bills"
+                ? "px-1 py-1 rounded-xl bg-orange-200"
+                : expense.category === "Transport"
+                ? "bg-blue-200"
+                : expense.category === "Entertainment"
+                ? "bg-fuchsia-200"
+                : expense.category === "Food"
+                ? "bg-green-200"
+                : "bg-gray-200"
+            }`}
+          >
+            {expense.category}
+          </h2>
+        </td>
+        <td className="hidden md:table-cell font-normal text-gray-500">
+          {expense.date}
+        </td>
+        <td className="hidden  md:table-cell ">
+          <div className="flex text-[12px] gap-4 ">
             <button
               onClick={() => {
                 setShowUpdate(true);

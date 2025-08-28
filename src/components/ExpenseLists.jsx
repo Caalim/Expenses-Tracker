@@ -136,11 +136,11 @@ const ExpenseLists = () => {
               <table className="border-collapse w-full text-left">
                 <thead>
                   <tr className="border-b-1 border-gray-300 bg-gray-50 text-gray-300 text-[14px] font-normal">
-                    <th className="px-6 py-2">DESCRIPTION</th>
-                    <th>AMOUNT</th>
-                    <th>CATEGORY</th>
-                    <th>DATE</th>
-                    <th>Action</th>
+                    <th className="md:px-6 py-2 text-left">DESCRIPTION</th>
+                    <th className="text-left pl-8 md:pl-0">AMOUNT</th>
+                    <th className="text-left pl-7 md:pl-0">CATEGORY</th>
+                    <th className="hidden md:table-cell text-left">DATE</th>
+                    <th className="hidden md:table-cell text-left">Action</th>
                   </tr>
                 </thead>
 

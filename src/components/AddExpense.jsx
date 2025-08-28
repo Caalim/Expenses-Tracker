@@ -6,6 +6,7 @@ import {
 } from "../store/api/ExpenseSlice";
 import { useDispatch, useSelector } from "react-redux";
 import moment from "moment";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const AddExpense = ({ onClose }) => {
   const [expenseDate, setExpenseDate] = useState({
@@ -15,7 +16,7 @@ const AddExpense = ({ onClose }) => {
     date: "",
     note: "",
   });
-
+  const nagative = useNavigate();
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
@@ -29,6 +30,7 @@ const AddExpense = ({ onClose }) => {
         date: "",
         note: "",
       });
+      onClose(false);
     } else {
       dispatch(
         updateExpnse({
@@ -43,10 +45,11 @@ const AddExpense = ({ onClose }) => {
         date: "",
         note: "",
       });
+      onClose(false);
     }
   };
 
-  dispatch(updateExpnse());
+  // dispatch(updateExpnse());
 
   const isEditing = useSelector((state) => state.expense.updatingExpense);
   const UpdatingtoEexpense = useSelector(
@@ -174,6 +177,9 @@ const AddExpense = ({ onClose }) => {
                   <button
                     className="py-2 px-4 bg-blue-700 rounded-md font-semibold text-white ml-4"
                     type="submit"
+                    // onClick={() => {
+                    //   onClose(false);
+                    // }}
                   >
                     Save expense
                   </button>
@@ -193,6 +199,9 @@ const AddExpense = ({ onClose }) => {
                   <button
                     className="py-2 px-4 bg-blue-700 rounded-md font-semibold text-white ml-4"
                     type="submit"
+                    // onClick={() => {
+                    //   onClose(false);
+                    // }}
                   >
                     Update expense
                   </button>

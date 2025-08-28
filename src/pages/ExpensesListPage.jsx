@@ -1,7 +1,7 @@
 import ExpenseLists from "../components/ExpenseLists";
 const ExpensesListPage = () => {
   return (
-    <div className="container">
+    <div className="container mx-auto">
       <ExpenseLists />
       {/* <div className="w-[90%] mx-auto">ExpensesList</div> */}
     </div>

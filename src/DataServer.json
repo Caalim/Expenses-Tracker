@@ -1,36 +1,36 @@
 {
   "expenses": [
     {
-      "id": "1",
       "description": "Grocery shopping",
-      "amount": 85.5,
-      "category": "Food",
+      "amount": "86.00",
+      "category": "Other",
       "date": "2025-01-15",
-      "note": "Weekly groceries from supermarket"
+      "note": "Weekly groceries from supermarket",
+      "id": "1"
     },
     {
-      "id": "3",
       "description": "Electric bill",
       "amount": 120.75,
       "category": "Bills",
       "date": "2025-01-13",
-      "note": "Monthly electricity bill"
+      "note": "Monthly electricity bill",
+      "id": "3"
     },
     {
-      "id": "4",
       "description": "Movie tickets",
-      "amount": 25,
+      "amount": "27.25",
       "category": "Entertainment",
       "date": "2025-01-12",
-      "note": "Weekend movie with friends"
+      "note": "Weekend movie with friends",
+      "id": "4"
     },
     {
-      "id": "5",
       "description": "Office supplies",
-      "amount": 32.99,
+      "amount": "36.99",
       "category": "Other",
       "date": "2025-01-11",
-      "note": "Notebooks and pens"
+      "note": "Notebooks and pens",
+      "id": "5"
     },
     {
       "id": "6",
@@ -41,12 +41,12 @@
       "note": "Anniversary dinner"
     },
     {
-      "id": "7",
       "description": "Uber ride",
-      "amount": 18.5,
+      "amount": "19.99",
       "category": "Transport",
       "date": "2025-01-09",
-      "note": "Airport transfer"
+      "note": "Airport transfer",
+      "id": "7"
     },
     {
       "id": "8",
@@ -58,11 +58,19 @@
     },
     {
       "description": "Movie tickets",
-      "amount": "55.5",
-      "category": "Entertainment",
+      "amount": "56.55",
+      "category": "Bills",
       "date": "2025-08-21",
       "note": "Weekend movie with friends",
       "id": "2157"
+    },
+    {
+      "description": "Movie tickets",
+      "amount": "79.00",
+      "category": "Transport",
+      "date": "2025-08-29",
+      "note": "Weekend movie with friends",
+      "id": "a0e8"
     }
   ]
 }

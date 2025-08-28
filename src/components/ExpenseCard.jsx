@@ -13,15 +13,19 @@ const ExpenseCard = ({ expense }) => {
 
   const handleDelete = (expenseId) => {
     Swal.fire({
-      title: "Delete Expense",
+      title: `<div class= "flex items-center gap-2">
+      <div class="bg-red-200 p-2 flex items-center justify-center  rounded-full "><i class="fa-solid fa-triangle-exclamation text-[18px] text-red-400"></i></div>
+      <h2 class= "font-medium text-[14px]  ">Delete Expense</h2>
+      </div>`,
       html: `
-      <p>Are you sure to delete this expense</p>
-      <h1 class = "bg-gray-200 w-full p-2 rounded-md text-xl font-bold mt-2">${expense.description} !</h2>`,
-      icon: "warning",
+        <p>Are you sure to delete this expense</p>
+        <h1 class = "bg-gray-200 w-full p-2 rounded-md text-xl font-bold mt-2">${expense.description} !</h2>`,
       showCancelButton: true,
       cancelButtonText: "Cancel",
       confirmButtonText: "Delete",
-      confirmButtonColor: "#d33",
+      confirmButtonColor: "#2563EB",
+      width: "350px",
+      padding: "0px",
     }).then((event) => {
       if (event.isConfirmed) {
         dispatch(deleteExpense({ expenseId: expense.id }));
