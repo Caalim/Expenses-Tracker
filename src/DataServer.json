@@ -1,39 +1,47 @@
 {
   "expenses": [
     {
+      "id": 1,
       "description": "Grocery shopping",
-      "amount": "86.00",
-      "category": "Other",
+      "amount": 85.5,
+      "category": "Food",
       "date": "2025-01-15",
-      "note": "Weekly groceries from supermarket",
-      "id": "1"
+      "note": "Weekly groceries from supermarket"
     },
     {
+      "id": 2,
+      "description": "Gas station",
+      "amount": 45,
+      "category": "Transport",
+      "date": "2025-01-14",
+      "note": "Fill up tank"
+    },
+    {
+      "id": 3,
       "description": "Electric bill",
       "amount": 120.75,
       "category": "Bills",
       "date": "2025-01-13",
-      "note": "Monthly electricity bill",
-      "id": "3"
+      "note": "Monthly electricity bill"
     },
     {
+      "id": 4,
       "description": "Movie tickets",
-      "amount": "27.25",
+      "amount": 25,
       "category": "Entertainment",
       "date": "2025-01-12",
-      "note": "Weekend movie with friends",
-      "id": "4"
+      "note": "Weekend movie with friends"
     },
     {
+      "id": 5,
       "description": "Office supplies",
-      "amount": "36.99",
+      "amount": 32.99,
       "category": "Other",
       "date": "2025-01-11",
-      "note": "Notebooks and pens",
-      "id": "5"
+      "note": "Notebooks and pens"
     },
     {
-      "id": "6",
+      "id": 6,
       "description": "Restaurant dinner",
       "amount": 78.25,
       "category": "Food",
@@ -41,15 +49,15 @@
       "note": "Anniversary dinner"
     },
     {
+      "id": 7,
       "description": "Uber ride",
-      "amount": "19.99",
+      "amount": 18.5,
       "category": "Transport",
       "date": "2025-01-09",
-      "note": "Airport transfer",
-      "id": "7"
+      "note": "Airport transfer"
     },
     {
-      "id": "8",
+      "id": 8,
       "description": "Internet bill",
       "amount": 65.99,
       "category": "Bills",
@@ -57,20 +65,12 @@
       "note": "Monthly internet subscription"
     },
     {
-      "description": "Movie tickets",
-      "amount": "56.55",
-      "category": "Bills",
-      "date": "2025-08-21",
-      "note": "Weekend movie with friends",
-      "id": "2157"
-    },
-    {
-      "description": "Movie tickets",
-      "amount": "79.00",
-      "category": "Transport",
-      "date": "2025-08-29",
-      "note": "Weekend movie with friends",
-      "id": "a0e8"
+      "description": "Electric bill",
+      "amount": "400.07",
+      "category": "Other",
+      "date": "2025-08-22",
+      "note": "Monthly electricity bill",
+      "id": "2cc0"
     }
   ]
 }

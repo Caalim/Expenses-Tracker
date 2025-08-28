@@ -47,7 +47,7 @@ const ExpenseLists = () => {
           <span>Connected</span>
         </div>
 
-        <div className="shadow p-6 my-4">
+        <div className="shadow p-6 my-4 bg-white">
           <div className="flex gap-2 items-center pb-3">
             <FaFilter className="text-blue-600" />
             <h2 className="font-medium">Filters</h2>
@@ -110,7 +110,7 @@ const ExpenseLists = () => {
           </div>
         </div>
 
-        <div className="shadow-md">
+        <div className="shadow-md mt-6 bg-white">
           <div className="flex justify-between items-center border-b-1 border-b-gray-400 p-4">
             <div>
               <h2 className=" font-bold text-[22px]">Expense List</h2>

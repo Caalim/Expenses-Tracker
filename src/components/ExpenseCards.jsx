@@ -42,13 +42,13 @@ const ExpenseCards = () => {
 
   return (
     <div className="contailner">
-      <div className="w-[95%] md:w-[90%] mx-auto">
+      <div className="w-[95%] md:w-[90%] mx-auto ">
         <div className="flex items-center  gap-2 text-green-400 justify-end  my-5">
           <FaWifi />
           <span>Connected</span>
         </div>
 
-        <div className="shadow p-2 my-4 rounded-md">
+        <div className="shadow p-6 my-4 rounded-md bg-white ">
           <div className="flex gap-2 items-center pb-3">
             <FaFilter className="text-blue-600" />
             <h2 className="font-medium">Filters</h2>
@@ -111,8 +111,8 @@ const ExpenseCards = () => {
           </div>
         </div>
 
-        <div className="shadow-md">
-          <div className="flex justify-between items-center border-b-1 border-b-gray-400 p-4 mb-4">
+        <div className="shadow-md bg-white rounded-md mt-6">
+          <div className="flex justify-between items-center border-b-1 border-b-gray-400 p-4">
             <div>
               <h2 className=" font-bold text-[22px]">Expense List</h2>
               <p className="font-mono text-[14px]">{`${totalExpenses} Expenses Found`}</p>
@@ -131,7 +131,7 @@ const ExpenseCards = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-2">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-2 ">
             {filtred &&
               filtred.map((expense, index) => (
                 <ExpenseCard expense={expense} key={index} />

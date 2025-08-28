@@ -46,7 +46,7 @@ const ExpenseList = ({ expense }) => {
 
   return (
     <>
-      <tr className="border-b-1 border-gray-300">
+      <tr className="border-b-1 border-gray-300 hover:bg-gray-100">
         <td className="px-2 md:px-6 py-2 w-26 md:w-auto  break-words text-left">
           <h2 className=" font-medium">{expense.description}</h2>
           <p className="text-[12px] text-gray-400"> {expense.note} </p>

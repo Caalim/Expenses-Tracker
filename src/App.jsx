@@ -8,15 +8,17 @@ import ExpenseCards from "./components/ExpenseCard";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<DashboardPage />} />
-        <Route path="/expense" element={<ExpensesCardPage />} />
-        <Route path="/expense/expenseCard" element={<ExpensesCardPage />} />
-        <Route path="/expense/expenseList" element={<ExpensesListPage />} />
-      </Routes>
-    </BrowserRouter>
+    <div>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<DashboardPage />} />
+          <Route path="/expense" element={<ExpensesCardPage />} />
+          <Route path="/expense/expenseCard" element={<ExpensesCardPage />} />
+          <Route path="/expense/expenseList" element={<ExpensesListPage />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 

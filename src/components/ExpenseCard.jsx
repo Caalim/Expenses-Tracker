@@ -43,7 +43,7 @@ const ExpenseCard = ({ expense }) => {
   return (
     <div>
       <div>
-        <div className="shadow-md rounded-md p-4 ">
+        <div className="shadow-md rounded-md p-4 bg-white">
           <div className="space-y-2">
             <div className="flex justify-between">
               <h2>{expense.description}</h2>

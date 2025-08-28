@@ -18,6 +18,24 @@ const DashboardPage = () => {
     (total, expense) => total + parseFloat(expense.amount),
     0
   );
+
+  const now = new Date();
+  const ThisMonth = now.getMonth();
+  const ThisYear = now.getFullYear();
+
+  const expensesThisMonth = TotalExpenses.filter((expense) => {
+    const expenseDate = new Date(expense.date);
+
+    return (
+      expenseDate.getMonth() === ThisMonth &&
+      expenseDate.getFullYear() === ThisYear
+    );
+  });
+
+  const TotalExpensesThisMonth = expensesThisMonth.reduce(
+    (total, expense) => total + parseFloat(expense.amount),
+    0
+  );
   return (
     <div>
       <div>
@@ -35,7 +53,9 @@ const DashboardPage = () => {
             <div className="flex justify-between items-center  bg-blue-600 py-4 px-4 rounded-lg">
               <div>
                 <h3 className="text-white py-2 font-medium">This Month</h3>
-                <h4 className="text-white font-bold text-2xl">$0.00</h4>
+                <h4 className="text-white font-bold text-2xl">
+                  $ {TotalExpensesThisMonth}{" "}
+                </h4>
               </div>
               <div>
                 <FaCalendarWeek className="text-white text-3xl" />

@@ -15,7 +15,7 @@ const Header = () => {
   // const showForm = () => {};
 
   return (
-    <div className="flex justify-around items-center h-20 shadow">
+    <div className="flex justify-around items-center h-20 shadow bg-white">
       <div className="flex items-center gap-3">
         <RiMoneyDollarBoxLine className="text-4xl bg-blue-600 p-1 rounded-lg text-white" />
         <h2 className="font-semibold md:font-bold md:text-xl">
